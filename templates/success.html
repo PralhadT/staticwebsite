@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="success-box">
+
+    <h1>Membership Added Successfully!</h1>
+
+    <p>Name: {{ name }}</p>
+    <p>Age: {{ age }}</p>
+    <p>Plan: {{ plan }}</p>
+
+    <a href="/">Go Back Home</a>
+
+</div>
+
+</body>
+</html>

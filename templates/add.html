@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Join Gym</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Join Membership</h2>
+
+    <form method="POST">
+
+        <input type="text" name="name" placeholder="Enter Name" required>
+
+        <input type="number" name="age" placeholder="Enter Age" required>
+
+        <select name="plan">
+            <option>Basic</option>
+            <option>Standard</option>
+            <option>Premium</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
