@@ -92,7 +92,7 @@ Fitness Pro Gym
 
     return render_template('register.html')
 
-# ADD MEMBER PAGE
+# ADD MEMBER PAGE 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
