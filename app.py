@@ -96,9 +96,17 @@ Fitness Pro Gym
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
-        name = request.form['name']
-        age = request.form['age']
-        plan = request.form['plan']
+
+        name = request.form.get('name', '').strip()
+        age = request.form.get('age', '').strip()
+        plan = request.form.get('plan', '').strip()
+
+        # Basic validation
+        if not name or not age or not plan:
+            return render_template(
+                'add.html',
+                error="All fields are required."
+            )
 
         return render_template(
             'success.html',
@@ -108,6 +116,7 @@ def add():
         )
 
     return render_template('add.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
